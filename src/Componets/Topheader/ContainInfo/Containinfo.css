@@ -1,0 +1,10 @@
+.main-container{
+    height: 500px;
+    display: flex;
+    margin: 50px;
+    margin-left: 200px;
+}
+.img-container img{
+    height: 500px;
+    margin-left: 200px;
+}

@@ -1,0 +1,8 @@
+.manubtn{
+    display: flex;
+    justify-content: center;
+   
+}
+.manubtn button{
+    margin: 15px;
+}
