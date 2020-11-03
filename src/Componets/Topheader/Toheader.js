@@ -13,7 +13,7 @@ const Toheader = () => {
         height: '400px',
         marginTop: '10px'
     };
-    const [count, setCount] = useContext(QuantityContext);
+    
     return (
         <div className='topheader'>
            <img src={logo} alt=""/>
@@ -23,14 +23,10 @@ const Toheader = () => {
              <img style={style} src={backgroundImg} alt=""/>
             </div>   
             <div>
-                <Contant></Contant>
+                
             </div>
             <div>
-                <Link to="chackout">
-           <button disabled={!count} style={{
-                position:'absolute',
-                left:'50%',}
-                }>Chackout Your Food</button> </Link>
+               
             </div>
                 
         </div>

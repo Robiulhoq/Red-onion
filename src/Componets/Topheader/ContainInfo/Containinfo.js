@@ -41,7 +41,6 @@ const Containinfo = () => {
                     <button onClick={decrice}>derice</button>
                     <br/>
                     <br/>
-                    <Link to={"/chackout/"+foodid}><button disabled={!count} > Add to cart test</button></Link>
                     <br/>
                     <button onClick={hendleAddProducts}>ADD</button>
             </div>

@@ -22,9 +22,11 @@ function App() {
   return (
     <QuantityContext.Provider value ={[count, setCount]}>
      <Router>
+       
        <Switch>
          <Route exact path="/">
          <Toheader></Toheader>
+         <Contant></Contant>
          </Route>
          <Route path="/contant">
             <Contant></Contant>

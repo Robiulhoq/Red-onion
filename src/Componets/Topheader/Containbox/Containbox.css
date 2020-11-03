@@ -1,13 +1,11 @@
-.container{
-    display: flex;
-    height:350px;
-    width: 300px;
-    margin: 15px;
-    padding: 10px;
-    box-shadow: 10px 10px 30px lightgray;
-    border-radius: 10px;
+.food-container{
+    width: 30%;
+    
+    display: inline-block;
+    margin-left: 3.0333%;
 }
-.img-box img{
-    width: 200px;
-    height: 200px;
+.food-container img{
+    width: 26%;
+    padding-left: 7%;
+    
 }

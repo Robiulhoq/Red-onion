@@ -19,6 +19,7 @@ const Delivaryitem = (props) => {
                <br/>
                <input type="submit" value="Save & Continue"/>
             </div>
+            
             <div className="cart-container">
             <h3>{title}</h3>
             <p>quaintity: {quantity}</p>
