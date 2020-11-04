@@ -3,6 +3,7 @@ import data from '../data/data.json';
 import { QuantityContext } from '../../../App';
 import { getDatabaseCart } from '../databaseManager/databaseManager';
 import Delivaryitem from '../Delivaryfood/Delivaryitem';
+import Delivaryinfo from '../Delivaryinfo/Delivaryinfo';
 
 const DelivaryCart = () => {
     
@@ -20,6 +21,9 @@ const DelivaryCart = () => {
 
     return (
         <div>
+            <div>
+            <Delivaryinfo></Delivaryinfo>
+            </div>
             {
                 food.map(fd => <Delivaryitem fd={fd}></Delivaryitem>)
             }

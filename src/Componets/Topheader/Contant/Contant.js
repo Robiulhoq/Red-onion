@@ -34,7 +34,7 @@ const [count, setCount] = useContext(QuantityContext);
                  item.map(singleItem => <Containbox  item={singleItem}></Containbox>)
             }
         <div>
-        <Link to="/chackout/foodid">
+        <Link to="/chackout">
            <button disabled={!count} style={{
                 position:'absolute',
                 left:'50%',}
