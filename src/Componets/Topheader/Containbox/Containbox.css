@@ -1,8 +1,9 @@
 .food-container{
     width: 30%;
-    
     display: inline-block;
     margin-left: 3.0333%;
+    box-shadow: 5px 5px 15px lightgray;
+    border-radius: 5px;
 }
 .food-container img{
     width: 26%;

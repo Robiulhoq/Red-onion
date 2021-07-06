@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,6 +7,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 import './App.css';
+import OdderCompleted from './Componets/OdderComlete/OdderCompleted';
 import Containinfo from './Componets/Topheader/ContainInfo/Containinfo';
 import Contant from './Componets/Topheader/Contant/Contant';
 import DelivaryCart from './Componets/Topheader/DelivaryCart/DelivaryCart';
@@ -19,7 +20,8 @@ import Toheader from './Componets/Topheader/Toheader';
 export const QuantityContext = createContext()
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
+
   const [user, setUser] = useState({
     isSingIN: false,
     name: '',
@@ -27,39 +29,44 @@ function App() {
     password: '',
     error: '',
   });
-  
+
+
+
   return (
-    <QuantityContext.Provider value ={[count, setCount]} loginValue = {[user, setUser]}>
-     <Router>
-       
-       <Switch>
-         <Route exact path="/">
-         <Toheader></Toheader>
-         <Contant></Contant>
-         </Route>
-         <Route path="/contant">
+    <QuantityContext.Provider value={[count, setCount]} loginValue={[user, setUser]}>
+      <Router>
+
+        <Switch>
+          <Route exact path="/">
+            <Toheader></Toheader>
             <Contant></Contant>
-         </Route>
-         <Route path="/login">
-           <Login></Login>
-         </Route>
-         <Route path="/foodinfo/:foodid">
-           <Containinfo></Containinfo>
-         </Route>
-         <PrivetdRoute path="/chackout">
-           <DelivaryCart></DelivaryCart>
-         </PrivetdRoute>
-         <Route path="/loginsingin">
-           <LoginSingIn></LoginSingIn>
-         </Route>
-         <Route path="*">
-           <Notfound></Notfound>
-         </Route>
-       </Switch>
-     </Router>
-      </QuantityContext.Provider>
-      
-    
+          </Route>
+          <Route path="/contant">
+            <Contant></Contant>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/foodinfo/:foodid">
+            <Containinfo></Containinfo>
+          </Route>
+          <Route path="/completedOdder">
+            <OdderCompleted></OdderCompleted>
+          </Route>
+          <PrivetdRoute path="/chackout">
+            <DelivaryCart></DelivaryCart>
+          </PrivetdRoute>
+          <Route path="/loginsingin">
+            <LoginSingIn></LoginSingIn>
+          </Route>
+          <Route path="*">
+            <Notfound></Notfound>
+          </Route>
+        </Switch>
+      </Router>
+    </QuantityContext.Provider>
+
+
   );
 }
 

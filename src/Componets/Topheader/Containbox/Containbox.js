@@ -12,13 +12,15 @@ const Containbox = (props) => {
     return ( 
         
 
-        <div className="food-container">
+        <div className="food-container container pt-5 mt-3">
             <Link style={style} to={"/foodinfo/"+id}>
+            <div className="d-flex justify-content-center">
             <img src={img} alt=""/>
-            <h4>{title}</h4>
-            <p>{description}</p>
+            </div>
+            <h4 className="text-center">{title}</h4>
+            <p className="text-center">{description}</p>
             </Link>
-            <h6>Price$ {price}</h6>
+            <h6 className="text-center">Price$ {price}</h6>
             
         </div>
     )

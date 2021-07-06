@@ -17,8 +17,8 @@ const Toheader = () => {
     return (
         <div className='topheader'>
            <img src={logo} alt=""/>
-                <Link to="/login"><button>Sing Up</button></Link>
-                <Link to="/login"><button>Login</button></Link>
+                <Link to="/login"><button className="btn">SING UP</button></Link>
+                <Link to="/login"><button className="btn">LOGIN</button></Link>
              <div>
              <img style={style} src={backgroundImg} alt=""/>
             </div>   
